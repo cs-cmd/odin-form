@@ -1,0 +1,65 @@
+:root {
+    --dflt-bg: #064434;
+    --dflt-bg-acc: #0A7358;
+    --dflt-bg-dark: #010f0b;
+    --dflt-bg-dark-tp: #010F0B00;
+}
+
+/* light mode version of above goes here */
+
+@font-face {
+    font-family: 'Noto';
+    src: url('../fonts/NotoSansNKoUnjoined-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url('../fonts/Norse-Bold.otf');
+}
+html {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Noto', sans-serif;
+}
+
+body {
+    background-color: var(--dflt-bg);
+    display: flex;
+    height: 100%;
+    margin: 0px;
+}
+
+.side-image-container {
+    background-color: var(--dflt-bg-acc);
+    height: 100%;
+    width: 550px;
+    background-image: url('../images/idaho_maybe.jpg');
+    background-size: 100% 100%;
+}
+
+.page-header {
+    width: 95%;
+    height: 100px;
+    margin-top: 150px;
+    background-image: linear-gradient(to right, #010F0B00, #010f0b90 40%);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    clip-path: polygon(0% 0%, 94% 0%, 100% 30%, 100% 100%, 0% 100%);
+}
+
+.header-text {
+    color: #fff;
+    margin-right: 50px;
+    font-size: 2.25rem;
+    font-family: 'Norse-Bold';
+    letter-spacing: .3rem;
+}
+
+.icon-image {
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+}
+
