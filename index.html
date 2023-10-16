@@ -18,43 +18,56 @@
         <h1 class="text-desc">Welcome!</h1>
         <h2 class="text-desc"> Enter your information down below to register for the application!</h2>
         <h2 class="text-desc">It's worth your while. :)</h2>
+        
         <form class="register-form" id="main-form" action="#" method="post">
             <div class="item-unit">
                 <label for="first_name">First Name</label>
-                <input min="2" max="20" type="text" name="first_name" id="first_name" placeholder="First Name">
+                <input required min="2" max="20" type="text" name="first_name" id="first_name" placeholder="First Name">
+                <p class="errMsg"></p>
             </div>
 
             <div class="item-unit">
                 <label for="last_name">Last Name</label>
-                <input min="2" max="25" type="text" name="last_name" id="last_name" placeholder="Last Name">
+                <input required min="2" max="25" type="text" name="last_name" id="last_name" placeholder="Last Name">
+                <p class="errMsg"></p>
             </div>
 
             <div class="item-unit">
                 <label for="email">Email address</label>
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input required type="email" name="email" id="email" placeholder="Email">
+                <p class="errMsg"></p>
             </div>
             
             <div class="item-unit">
                 <label for="phone">Phone number</label>
-                <input pattern="\(\d{3}\)\d{3}\-\d{4}"type="text" name="phone" pattern="" placeholder="(XXX)XXX-XXXX">
+                <input required pattern="\d{3}-\d{3}-\d{4}" type="text" name="phone" pattern="" placeholder="XXX-XXX-XXXX">
+                <p class="errMsg"></p>
             </div>
             
 
             <div class="item-unit">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <input min="5" required type="password" id="password" name="password">
+                <p class="errMsg"></p>
             </div>
             
             <div class="item-unit">
                 <label for="conf-password">Confirm Password</label>
-                <input type="password" id="conf-password">
+                <input min="5" required type="password" id="conf-password">
+                <p class="errMsg"></p>
             </div>
-
-            <button class="submit-button" type="submit">Create Account</button>
+    
+            <button class="submit-button" type="button">Create Account</button>
         
         </form>
 
+
+
         <p>Already have an account? <a href="#">Log in!</a></p>
+
+        <h1 class="thank-you-text">Thanks!</h1>
     </div>
+
+    <script src="./src/js/password-validation.js"></script>
 </body>
 </html>

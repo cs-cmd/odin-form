@@ -1,8 +1,8 @@
 :root {
     --dflt-bg: #d7f3fe;
     --dflt-bg-acc: #A5E4FC;
-    --dflt-bg-dark: #d7f3fe;
-    --dflt-bg-dark-tp: #d7f3fe00;
+    --dflt-bg-dark: #242a2c;
+    --dflt-bg-dark-tp: #1b1f2050;
     --dflt-text: #e8fcfe;
 }
 
@@ -98,22 +98,61 @@ body {
     width: 45%;
 }
 
-.register-form > input {
+.item-unit > input {
     border-radius: 3px;
     flex-basis: 50%;
+    border: 1px solid var(--dflt-bg-dark-tp);
+}
+
+.item-unit > input:invalid {
+    border: 1px solid red;
 }
 
 .submit-button {
     width: 75%;
     margin-top: 20px;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    background-color:#A5E4FC;
+    border: 1px solid var(--dflt-bg-dark-tp);
+    border-radius: .25rem;
+}
+
+.submit-button:hover {
+    cursor:pointer;
+}
+
+.submit-button:active {
+    border: .1rem solid var(--dflt-bg-dark)
+}
+
+.text-desc { 
+    margin-top: 1rem;
 }
 
 h1.text-desc {
     font-size: 2rem;
-    margin: .5rem;
 }
 
 h2.text-desc {
     font-size: 1.5rem;
-    margin: .5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--dflt-bg-dark);
+}
+
+.errMsg {
+    margin: 0px 1px;
+    height: 1rem;
+    color: red;
+}
+
+.thank-you-text {
+    text-align: center;
+    font-size: 2rem;
 }
