@@ -21,13 +21,19 @@ function passwordsMatch(passwordField, confPasswordField) {
 function submitForm() {
     let passwordField = document.getElementById('password');
     let passwordConf = document.getElementById('conf-password');
+    let form = document.querySelector('.register-form');
+
     let code = passwordsMatch(passwordField, passwordConf);
 
     console.log(code);
 
     switch(code) {
         case 0:
-            document.querySelector('.register-form').submit();
+            if (form.reportValidity()) {
+                // document.querySelector('.register-form').submit();
+                clearFields();
+                printThankYou();
+            }
             break;
         case 1: 
             printError('Password cannot empty', passwordField);
@@ -54,7 +60,20 @@ function printError(errMsg, sib) {
 function clearErrors() {
     let errParts = document.querySelector('.errMsg');
     for(let i = 0; i < errParts.length; ++i) {
-        errParts.innerText = '';
+        errParts[i].innerText = '';
     }
+}
+function clearFields() {
+    let inputs = document.querySelectorAll('.register-form > .item-unit > input');
+    console.log(inputs);
+    for(let i = 0; i < inputs.length; ++i) {
+        inputs[i].value = '';
+    }
+}
+
+function printThankYou() {
+    let thanksMsgEle = document.querySelector('.thank-you-text');
+
+    thanksMsgEle.innerText = 'Thank you for submitting your data!';
 }
 document.querySelector('.submit-button').addEventListener('click', submitForm);

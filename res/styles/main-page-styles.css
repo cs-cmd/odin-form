@@ -155,4 +155,6 @@ a:visited {
 .thank-you-text {
     text-align: center;
     font-size: 2rem;
+    height: 2rem;
+    margin: 0px;
 }
