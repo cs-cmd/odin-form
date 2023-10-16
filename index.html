@@ -13,5 +13,48 @@
             <h1 class="header-text">Register</h1>
         </header>
     </div>
+
+    <div class="form-container">
+        <h1 class="text-desc">Welcome!</h1>
+        <h2 class="text-desc"> Enter your information down below to register for the application!</h2>
+        <h2 class="text-desc">It's worth your while. :)</h2>
+        <form class="register-form" id="main-form" action="#" method="post">
+            <div class="item-unit">
+                <label for="first_name">First Name</label>
+                <input min="2" max="20" type="text" name="first_name" id="first_name" placeholder="First Name">
+            </div>
+
+            <div class="item-unit">
+                <label for="last_name">Last Name</label>
+                <input min="2" max="25" type="text" name="last_name" id="last_name" placeholder="Last Name">
+            </div>
+
+            <div class="item-unit">
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            
+            <div class="item-unit">
+                <label for="phone">Phone number</label>
+                <input pattern="\(\d{3}\)\d{3}\-\d{4}"type="text" name="phone" pattern="" placeholder="(XXX)XXX-XXXX">
+            </div>
+            
+
+            <div class="item-unit">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            
+            <div class="item-unit">
+                <label for="conf-password">Confirm Password</label>
+                <input type="password" id="conf-password">
+            </div>
+
+            <button class="submit-button" type="submit">Create Account</button>
+        
+        </form>
+
+        <p>Already have an account? <a href="#">Log in!</a></p>
+    </div>
 </body>
 </html>

@@ -1,8 +1,9 @@
 :root {
-    --dflt-bg: #064434;
-    --dflt-bg-acc: #0A7358;
-    --dflt-bg-dark: #010f0b;
-    --dflt-bg-dark-tp: #010F0B00;
+    --dflt-bg: #d7f3fe;
+    --dflt-bg-acc: #A5E4FC;
+    --dflt-bg-dark: #d7f3fe;
+    --dflt-bg-dark-tp: #d7f3fe00;
+    --dflt-text: #e8fcfe;
 }
 
 /* light mode version of above goes here */
@@ -32,9 +33,15 @@ body {
 .side-image-container {
     background-color: var(--dflt-bg-acc);
     height: 100%;
-    width: 550px;
+    --max-width: 550px;
+    --min-width: calc(var(--min-width) / 1.5);
+    width: var(--max-width);
+    min-width: var(--min-width);
     background-image: url('../images/idaho_maybe.jpg');
     background-size: 100% 100%;
+    flex-grow: 0;
+    flex-shrink: .5;
+    flex-basis: 1;
 }
 
 .page-header {
@@ -63,3 +70,50 @@ body {
     border-radius: 10px;
 }
 
+.form-container {
+    background-color: var(--dflt-bg);
+    display: flex;
+    flex-direction: column;
+    --max-width: 700px;
+    max-width: var(--max-width);
+    width: 100%;
+    font-size: .75rem;
+    padding-left: 1.5rem;
+    padding-top: 3rem;
+}
+
+.register-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.item-unit {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    width: 45%;
+}
+
+.register-form > input {
+    border-radius: 3px;
+    flex-basis: 50%;
+}
+
+.submit-button {
+    width: 75%;
+    margin-top: 20px;
+}
+
+h1.text-desc {
+    font-size: 2rem;
+    margin: .5rem;
+}
+
+h2.text-desc {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
